@@ -1,14 +1,12 @@
 package com.ale.taskmanager.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 public class TaskRequestDTO {
     @NotBlank
     private String title;
 
-    @NotNull
-    private Long userId;
+    private boolean completed;
 
     public String getTitle() {
         return title;
@@ -18,11 +16,11 @@ public class TaskRequestDTO {
         this.title = title;
     }
 
-    public Long getUserId() {
-        return userId;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }

@@ -19,7 +19,6 @@ public class Task {
     @JoinColumn(name = "user_id")
     private User user;
 
-
     public Task() {
     }
 

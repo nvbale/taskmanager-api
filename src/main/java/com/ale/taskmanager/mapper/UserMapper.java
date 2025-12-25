@@ -1,5 +1,6 @@
 package com.ale.taskmanager.mapper;
 
+import com.ale.taskmanager.dto.request.UserRequestDTO;
 import com.ale.taskmanager.dto.response.UserResponseDTO;
 import com.ale.taskmanager.entity.User;
 
@@ -11,4 +12,12 @@ public class UserMapper {
         dto.setEmail(user.getEmail());
         return dto;
     }
+
+    public static User toEntity(UserRequestDTO userRequestDTO){
+        User user = new User();
+        user.setName(userRequestDTO.getName());
+        user.setEmail(userRequestDTO.getEmail());
+        return user;
+    }
+
 }
